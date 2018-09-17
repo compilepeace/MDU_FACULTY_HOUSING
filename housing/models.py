@@ -14,7 +14,7 @@ class Room(models.Model):
 
 
 class Status(models.Model):
-    room = models.OneToOneField(Room)
+    room = models.OneToOneField(Room, on_delete=models.CASCADE)
     status = models.CharField(max_length=15, choices=(
         ('available', 'Available'),
         ('booked', 'Booked'),
